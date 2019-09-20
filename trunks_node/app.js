@@ -42,7 +42,7 @@ app.all('*', function (req, res, next) {
 // })
 
 //配置服务端口
-const server = app.listen(3000, function () {
+const server = app.listen(7788, function () {
 
     const host = server.address().address;
  
