@@ -1,9 +1,6 @@
 import QS from 'qs'; 
 import axios from 'axios';
 
-// axios.defaults.baseURL = 'http://localhost:3000/api';//本地
-// axios.defaults.baseURL = 'http://149.129.59.121:3000/api';//正式服
-
 axios.defaults.withCredentials = true 
 /**
  * get方法，对应get请求
