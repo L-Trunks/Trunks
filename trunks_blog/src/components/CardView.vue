@@ -1,6 +1,5 @@
 <template>
-  <div class="home">
-    <router-view/>
+  <div>
   </div>
 </template>
 
@@ -8,7 +7,7 @@
 
 
 export default {
-  name: 'home',
+  name: 'CardView',
   components: {
     
   }
