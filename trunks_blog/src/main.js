@@ -13,7 +13,6 @@ axios.defaults.withCredentials = true
 
 // Vue.prototype.$axios=axios;
 Vue.config.productionTip = false
-Vue.config.productionTip = false
 
 new Vue({
   router,

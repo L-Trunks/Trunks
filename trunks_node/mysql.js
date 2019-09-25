@@ -10,8 +10,6 @@ export class _mysql {
           database: 'Trunks',
           port: '3306'     //端口号
        });
- 
- 
     }
     connect() {
        this.connection.connect(function (err) {
