@@ -1,7 +1,7 @@
-import QS from 'qs'; 
+import QS from 'qs';
 import axios from 'axios';
 
-axios.defaults.withCredentials = true 
+axios.defaults.withCredentials = true
 /**
  * get方法，对应get请求
  * @param {String} url [url地址]
@@ -10,7 +10,7 @@ axios.defaults.withCredentials = true
 export function get(url, params) {
     return new Promise((resolve, reject) => {
         axios.get(url, {
-            params:params
+            params: params
         }).then(res => {
             resolve(res.data);
         }).catch(err => {
@@ -27,12 +27,12 @@ export function get(url, params) {
 export function post(url, params) {
     return new Promise((resolve, reject) => {
         console.log(params)
-         axios.post(url, QS.stringify(params))
-        .then(res => {
-            resolve(res.data);
-        })
-        .catch(err =>{
-            reject(err.data)
-        })
+        axios.post(url, QS.stringify(params))
+            .then(res => {
+                resolve(res.data);
+            })
+            .catch(err => {
+                reject(err.data)
+            })
     });
 }
