@@ -1,13 +1,15 @@
 <template>
-    <div></div>
+  <div></div>
 </template>
 
 <script>
 export default {
-    name:'Main'
-}
+  name: "Main",
+  data() {
+    return {};
+  }
+};
 </script>
 
 <style scored>
-
 </style>

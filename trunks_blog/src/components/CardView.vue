@@ -8,8 +8,10 @@
 
 export default {
   name: 'CardView',
-  components: {
-    
+  data(){
+    return {
+      
+    }
   }
 }
 </script>
