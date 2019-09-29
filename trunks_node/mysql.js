@@ -10,8 +10,6 @@ export class _mysql {
           database: 'Trunks',
           port: '3306'     //端口号
        });
- 
- 
     }
     connect() {
        this.connection.connect(function (err) {
@@ -22,20 +20,20 @@ export class _mysql {
           console.log('连接succeed');
        });
     }
-    // //知识点上传
-    // addBlog(callback) {
-    //    this.connection.query('insert into blog_data (user_id,title,article,is_share,sort,sort_id) values (?,?,?,?,?,?)',
-    //       [this.getData.user_id, this.getData.title, this.getData.article, this.getData.is_share, this.getData.sort, this.getData.sort_id],
-    //       (err, rs, fields) => {
-    //          if (err) {
-    //             return callback(err, rs, fields)
-    //          } else {
-    //             this.connection.query('select * from blog_data where id = LAST_INSERT_ID()', (err, blog, fields) => {
-    //                return callback(err, blog, fields)
-    //             })
-    //          }
-    //       })
-    // }
+    //知识点上传
+    addBlog(callback) {
+       this.connection.query('insert into blog_data (user_id,title,article,is_share,sort,sort_id) values (?,?,?,?,?,?)',
+          [this.getData.user_id, this.getData.title, this.getData.article, this.getData.is_share, this.getData.sort, this.getData.sort_id],
+          (err, rs, fields) => {
+             if (err) {
+                return callback(err, rs, fields)
+             } else {
+                this.connection.query('select * from blog_data where id = LAST_INSERT_ID()', (err, blog, fields) => {
+                   return callback(err, blog, fields)
+                })
+             }
+          })
+    }
     //关闭数据库
     close() {
        this.connection.end(function (err) {
