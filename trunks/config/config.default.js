@@ -22,7 +22,16 @@ module.exports = appInfo => {
   const userConfig = {
     // myAppName: 'egg',
   };
-
+  // 数据库配置
+  exports.mongoose = {
+    client: {
+      url: 'mongodb://trunks:mongo1998@149.129.59.121:27017/trunks',
+      options: {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
+    },
+  };
   return {
     ...config,
     ...userConfig,
