@@ -7,5 +7,9 @@ class ArticleController extends Controller {
     const res = await ctx.service.article.getProjectById();
     ctx.body = res; // 返回值显示
   }
+  async getArticle() {
+    const { ctx } = this;
+    ctx.body = {};
+  }
 }
 module.exports = ArticleController;
